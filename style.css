@@ -1,0 +1,146 @@
+body {
+  margin:0;
+  font-family:'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero {
+  height:100vh;
+  background:url('images/bg.jpg') center/cover fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  color:white;
+  animation: fadeInHero 2s ease;
+}
+
+.overlay {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position:relative;
+  text-align:center;
+}
+
+.hero h1 {
+  font-family:'Great Vibes';
+  font-size:70px;
+}
+
+.btn {
+  display:inline-block;
+  margin-top:20px;
+  padding:15px 35px;
+  background:#c89b7b;
+  border-radius:30px;
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+  box-shadow:0 0 20px rgba(200,155,123,0.5);
+  position:relative;
+  overflow:hidden;
+}
+
+.btn:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 40px rgba(200,155,123,0.8);
+}
+
+.btn::after {
+  content:"";
+  position:absolute;
+  width:0;
+  height:0;
+  background:rgba(255,255,255,0.4);
+  border-radius:50%;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  transition:0.6s;
+}
+
+.btn:active::after {
+  width:300px;
+  height:300px;
+}
+
+section {
+  opacity:0;
+  transform:translateY(80px);
+  transition: all 1.2s ease;
+}
+
+section.show {
+  opacity:1;
+  transform:translateY(0);
+}
+
+.countdown {
+  text-align:center;
+  padding:60px;
+  background:#f9e8dc;
+}
+
+.timer {
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.timer div {
+  padding:20px;
+  border-radius:10px;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.3);
+}
+
+.program {
+  text-align:center;
+  padding:60px;
+}
+
+.grid {
+  display:flex;
+  justify-content:center;
+  gap:40px;
+}
+
+.gallery {
+  padding:60px;
+  text-align:center;
+}
+
+.photos {
+  display:flex;
+  gap:20px;
+  justify-content:center;
+}
+
+.photos img {
+  width:250px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.photos img:hover {
+  transform:scale(1.1);
+}
+
+footer {
+  text-align:center;
+  padding:30px;
+  background:#f9e8dc;
+}
+
+@keyframes fadeInHero {
+  from {opacity:0; transform:scale(1.05);}
+  to {opacity:1; transform:scale(1);}
+}

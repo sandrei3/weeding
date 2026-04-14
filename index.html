@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrei & Maria</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1>Andrei & Maria</h1>
+    <p>Vă invităm cu drag la nunta noastră</p>
+    <div class="date">15 August 2026</div>
+    <div class="location">Restaurant Lago Snagov</div>
+
+    <a href="AICI_PUI_LINKUL_GOOGLE_FORM" class="btn" target="_blank">
+      Confirmă participarea
+    </a>
+  </div>
+</section>
+
+<section class="countdown">
+  <h2>Mai sunt până la nuntă:</h2>
+  <div class="timer">
+    <div><span id="days"></span><p>Zile</p></div>
+    <div><span id="hours"></span><p>Ore</p></div>
+    <div><span id="minutes"></span><p>Minute</p></div>
+    <div><span id="seconds"></span><p>Secunde</p></div>
+  </div>
+</section>
+
+<section class="program">
+  <h2>Programul zilei</h2>
+  <div class="grid">
+    <div>💍<p>14:00<br>Cununie civilă</p></div>
+    <div>⛪<p>17:00<br>Cununie religioasă</p></div>
+    <div>🥂<p>19:00<br>Petrecere</p></div>
+  </div>
+</section>
+
+<section class="gallery">
+  <h2>Atmosferă</h2>
+  <div class="photos">
+    <img src="images/bg.jpg">
+    <img src="images/bg.jpg">
+    <img src="images/bg.jpg">
+  </div>
+</section>
+
+<footer>
+  <p>Confirmă participarea până la 1 August</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+document.addEventListener("click", () => {
+  document.getElementById("music").play();
+});
+</script>
+
+</body>
+</html>
