@@ -1,74 +1,54 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andrei & Maria</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Andrei & Bianca Wedding</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<audio id="music" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
-
 <section class="hero">
-  <div class="overlay"></div>
+  <div class="glow"></div>
 
-  <div class="hero-content">
-    <h1>Andrei & Maria</h1>
-    <p>Vă invităm cu drag la nunta noastră</p>
-    <div class="date">15 August 2026</div>
-    <div class="location">Restaurant Lago Snagov</div>
+  <h1>Andrei <span>&</span> Bianca</h1>
+  <p>26 Septembrie 2026</p>
 
-    <a href="AICI_PUI_LINKUL_GOOGLE_FORM" class="btn" target="_blank">
-      Confirmă participarea
-    </a>
+  <div class="countdown">
+    <div><span id="d"></span><small>Days</small></div>
+    <div><span id="h"></span><small>Hours</small></div>
+    <div><span id="m"></span><small>Min</small></div>
+    <div><span id="s"></span><small>Sec</small></div>
   </div>
+
+  <button onclick="saveDate()">Save the Date</button>
 </section>
 
-<section class="countdown">
-  <h2>Mai sunt până la nuntă:</h2>
-  <div class="timer">
-    <div><span id="days"></span><p>Zile</p></div>
-    <div><span id="hours"></span><p>Ore</p></div>
-    <div><span id="minutes"></span><p>Minute</p></div>
-    <div><span id="seconds"></span><p>Secunde</p></div>
-  </div>
+<section class="card">
+  <h2>Cununia religioasă</h2>
+  <p>16:00 - Biserica Înălțarea Domnului, Galați</p>
+  <iframe src="https://www.google.com/maps?q=Biserica%20Inaltarea%20Domnului%20Galati&output=embed"></iframe>
 </section>
 
-<section class="program">
-  <h2>Programul zilei</h2>
-  <div class="grid">
-    <div>💍<p>14:00<br>Cununie civilă</p></div>
-    <div>⛪<p>17:00<br>Cununie religioasă</p></div>
-    <div>🥂<p>19:00<br>Petrecere</p></div>
-  </div>
+<section class="card">
+  <h2>Petrecerea</h2>
+  <p>19:30 - Union Jack Event, Galați</p>
+  <iframe src="https://www.google.com/maps?q=Union%20Jack%20Event%20Galati&output=embed"></iframe>
 </section>
 
-<section class="gallery">
-  <h2>Atmosferă</h2>
-  <div class="photos">
-    <img src="images/bg.jpg">
-    <img src="images/bg.jpg">
-    <img src="images/bg.jpg">
-  </div>
+<section class="card">
+  <h2>RSVP</h2>
+
+  <input id="name" placeholder="Nume"/>
+  <input id="people" type="number" placeholder="Persoane"/>
+  <button onclick="rsvp()">Confirm</button>
+
+  <div id="list"></div>
 </section>
 
-<footer>
-  <p>Confirmă participarea până la 3 August</p>
-</footer>
-
-<script src="script.js"></script>
-
-<script>
-document.addEventListener("click", () => {
-  document.getElementById("music").play();
-});
-</script>
-
+<script src="app.js"></script>
 </body>
 </html>
